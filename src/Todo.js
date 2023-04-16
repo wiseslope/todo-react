@@ -4,6 +4,7 @@ class Todo extends React.Component {
         super(props);
         this.state ={ item: props.item }; // 매개변수 item 의 변수/값을 item에 대입
     }
+    
     render(){
         return (
             <div className="Todo">
@@ -14,8 +15,7 @@ class Todo extends React.Component {
                     checked={this.state.item.done} // item.done 값으로 렌더링하란 의미
                 />
                 <label for={this.state.item.id}>{this.state.item.title}</label>
-                
-            </div>
+                </div>
         );
     }
 }
