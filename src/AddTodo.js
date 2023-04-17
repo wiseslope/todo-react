@@ -12,7 +12,6 @@ class AddTodo extends React.Component {
         this.setState({item:thisItem});
         console.log(thisItem);
     }
-    
     onButtonClick =()=>{
         this.add(this.state.item);
         this.setState({item:{title:""}});// text 값을 추가하고 입력 필드는 초기화시킨다.
@@ -34,20 +33,20 @@ class AddTodo extends React.Component {
                     value={this.state.item.title}
                     onKeyPress={this.enterKeyEventHandler}
                     />
+                    </Grid>
+                    <Grid xs={1} md={1} item>
+                        <Button
+                        fullWidth
+                        color="secondary"
+                        variant="outlined"
+                        onClick={this.onButtonClick}
+                        >
+                            +
+                            </Button>
+                    </Grid>
                 </Grid>
-                <Grid xs={1} md={1} item>
-                    <Button
-                    fullWidth
-                    color="secondary"
-                    variant="outlined"
-                    onClick={this.onButtonClick}
-                    >
-                        +
-                    </Button>
-                </Grid>
-            </Grid>
-        </Paper>
-    );
-}
+            </Paper>
+        );
+    }
 }
 export default AddTodo;
